@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-clarity: #F4EADA;
+  --color-land: #DEC9B2;
+  --color-authenticity: #6B4E45;
+  --color-determination: #231f20;
+  --color-saudi-red: #A32B38;
+  --color-saudi-yellow: #F5D758;
+  --color-saudi-pink: #D2988F;
+  --color-saudi-brown: #BA7747;
+  --color-saudi-green: #8DAD73;
+  --color-saudi-orange: #E76A58;
+  --color-saudi-purple: #8A77A1;
+  --color-saudi-blue: #629BA6;
+
+  --font-harir: Harir, sans-serif;
+  --font-sakkal: "Sakkal Majalla", sans-serif;
+}
+
+@font-face {
+  font-family: 'Harir';
+  src: url('/fonts/Harir_complete_OTF_Harir.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Harir';
+  src: url('/fonts/Harir_complete_OTF_Harir_Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --clarity: #F4EADA;
+  --land: #DEC9B2;
+  --authenticity: #6B4E45;
+  --determination: #231f20;
+}
+
+body {
+  font-family: 'Harir', 'Sakkal Majalla', sans-serif;
+  background-color: var(--clarity);
+  color: var(--determination);
+}
