@@ -8,7 +8,6 @@ const events: TimelineEvent[] = [
     title: 'تأسيس الدولة السعودية الأولى',
     description: audioContent.historicalMoments.founding,
     audioText: audioContent.historicalMoments.founding,
-    image: '/images/gallery/founding.jpg'
   },
   {
     year: '1744',
@@ -16,7 +15,6 @@ const events: TimelineEvent[] = [
     title: 'توحيد الدرعية',
     description: audioContent.historicalMoments.unity,
     audioText: audioContent.historicalMoments.unity,
-    image: '/images/gallery/unity.jpg'
   },
   {
     year: '1818',
@@ -24,7 +22,6 @@ const events: TimelineEvent[] = [
     title: 'انتهاء الدولة السعودية الأولى',
     description: audioContent.historicalMoments.legacy,
     audioText: audioContent.historicalMoments.legacy,
-    image: '/images/gallery/legacy.jpg'
   }
 ];
 

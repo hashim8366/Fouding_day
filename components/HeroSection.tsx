@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion';
 import AudioPlayer from './AudioPlayer';
 import { audioContent } from '@/data/audio-content';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function HeroSection() {
   return (
@@ -19,14 +21,20 @@ export default function HeroSection() {
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
-          className="mb-8"
+          className="mb-8 flex justify-center"
         >
-          {/* Logo Placeholder */}
-          <div className="h-32 w-32 mx-auto mb-6 bg-authenticity rounded-full flex items-center justify-center text-clarity font-bold text-2xl shadow-lg border-4 border-land">
-            يوم التأسيس
+          {/* Official Logo */}
+          <div className="relative w-64 h-64 md:w-80 md:h-80">
+             <Image
+                src="/images/logo.png"
+                alt="يوم التأسيس السعودي"
+                fill
+                className="object-contain drop-shadow-xl"
+                priority
+             />
           </div>
         </motion.div>
 
@@ -34,7 +42,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-6xl md:text-8xl font-bold text-authenticity mb-4 font-harir"
+          className="text-6xl md:text-8xl font-bold text-authenticity mb-4 font-harir tracking-tight"
         >
           يــــــوم بدينــــــا
         </motion.h1>
@@ -43,7 +51,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-2xl md:text-3xl text-determination mb-2 tracking-widest"
+          className="text-2xl md:text-3xl text-determination mb-2 tracking-[0.2em] font-serif uppercase"
         >
           OUR STORY
         </motion.p>
@@ -61,20 +69,21 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-lg text-determination mb-12 font-bold"
+          className="text-lg text-determination mb-12 font-bold dir-ltr font-mono"
         >
-          1139هـ / 1727م
+          1727 / 1139
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="flex flex-col items-center gap-6"
+          className="flex flex-col items-center gap-8"
         >
-          <a href="/journey" className="px-8 py-4 bg-authenticity text-clarity rounded-full text-xl font-bold hover:bg-determination transition-colors shadow-xl cursor-pointer">
-            ابدأ الرحلة
-          </a>
+          <Link href="/journey" className="group relative px-8 py-4 bg-authenticity text-clarity rounded-full text-xl font-bold hover:bg-determination transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
+            <span className="relative z-10">ابدأ الرحلة</span>
+            <div className="absolute inset-0 rounded-full bg-white/20 scale-0 group-hover:scale-100 transition-transform duration-300 origin-center" />
+          </Link>
 
           <AudioPlayer text={audioContent.welcome} />
         </motion.div>

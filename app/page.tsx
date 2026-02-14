@@ -12,7 +12,6 @@ const timelineEvents = [
     title: 'تأسيس الدولة السعودية الأولى',
     description: audioContent.historicalMoments.founding,
     audioText: audioContent.historicalMoments.founding,
-    image: '/images/gallery/founding.jpg' // Placeholder
   }
 ];
 
