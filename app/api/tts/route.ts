@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { synthesizeSpeech } from '@/lib/azure-tts';
+import { synthesizeSpeech } from '@/lib/elevenlabs';
 
 export async function POST(request: NextRequest) {
   try {
