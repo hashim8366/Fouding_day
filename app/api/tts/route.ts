@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { synthesizeSpeech } from '@/lib/elevenlabs';
+import { synthesizeSpeech } from '@/lib/edge-tts';
 
 export async function POST(request: NextRequest) {
   try {
