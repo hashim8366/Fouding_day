@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
     const audioData = await synthesizeSpeech(text);
 
     // Return the audio data
-    return new NextResponse(audioData, {
+    return new NextResponse(audioData as any, {
       headers: {
         'Content-Type': 'audio/mpeg',
         'Content-Length': audioData.byteLength.toString(),
