@@ -1,0 +1,24 @@
+[package]
+name = "saudi-founding-day"
+version = "0.1.0"
+description = "Saudi Founding Day Interactive Web App"
+
+[[module]]
+name = "server"
+source = "dist/standalone/server.js"
+abi = "wasi"
+
+[[command]]
+name = "start"
+module = "server"
+runner = "https://webc.org/runner/node"
+annotations = { wagi = "false" }
+
+[fs]
+# Map public folder to root and standalone location
+"/public" = "public"
+"/dist/standalone/public" = "public"
+
+# Map static assets to dist and standalone location
+"/dist/static" = "dist/static"
+"/dist/standalone/dist/static" = "dist/static"
