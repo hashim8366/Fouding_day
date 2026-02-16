@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: saudi-founding-day
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NEXT_PUBLIC_APP_URL
+        sync: false

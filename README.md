@@ -31,3 +31,20 @@
    wasmer deploy
    ```
    The `wasmer.toml` configuration is set up to deploy the standalone server and map the static assets correctly.
+
+## Deployment on Render
+
+This project includes a `render.yaml` configuration for easy deployment.
+
+1. Create a [Render](https://render.com) account.
+2. Connect your GitHub repository.
+3. In the Render Dashboard, click "New +" and select "Blueprint".
+4. Select your repository.
+5. Render will automatically detect the `render.yaml` file and configure the service.
+6. Click "Apply".
+
+Alternatively, manually create a Web Service:
+- **Runtime:** Node
+- **Build Command:** `npm install && npm run build`
+- **Start Command:** `npm start`
+- **Environment Variables:** Add `NEXT_PUBLIC_APP_URL` with your Render URL (e.g. `https://your-app.onrender.com`).
